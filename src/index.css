@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.links a{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: x-large;
+  color: darkblue;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #e91e63;
+  /* height: 92px; */
+  animation: hamTwo 1s 1 forwards ease;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80vw;
+}
+
+@keyframes hamTwo {
+  from{
+    /* height: 330px; */
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.logo-mob{
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-template-rows: 200px 200px;
+  justify-content: space-around;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #e91e63;
+  animation: ham 2s 1 forwards ease;
+  /* height: 300px; */
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80vw;
+}
+@keyframes ham {
+  /* from{
+  }
+  to{
+    height: 330px;
+  } */
+  from{
+    opacity: 0;
+    height: 100px;
+  }
+  to{
+    opacity: 1;
+    height: 330px;
+  }
+
+
+}
+.hamburger{
+  display: none;
+}
+
+@media (max-width:800px) {
+  .links{
+    display: none;
+  }
+  .logo{
+    width: 80vw;
+    align-items: flex-start;
+  }
+  .hamburger{
+    display: block;
+  }
+}
